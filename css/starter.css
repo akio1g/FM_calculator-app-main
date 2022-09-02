@@ -1,0 +1,206 @@
+
+:root {
+    --border-all: 10px;
+}
+
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    box-sizing: border-box;
+}
+
+body, button {
+    font-size: 2rem;
+    font-family: 'League Spartan', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 600px;
+    width: 90%;
+    margin: auto;
+    gap: 1rem;
+}
+
+header, main {
+    width: 100%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 50px;
+}
+
+header > h1 {
+    font-size: 2rem;
+    align-self: center;
+}
+
+.section-theme {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.section-theme > h2 {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.theme-options {
+    display: flex;
+    width: 70px;
+}
+
+.theme-options {
+    justify-content: space-evenly;
+}
+
+.theme-options label{
+    font-size: 1rem;
+}
+
+.container {
+    position: absolute;
+}
+
+.radio-wrapper {
+    width: 70px;
+    height: 25px;
+    display: inline-block;
+    vertical-align: middle;
+    background: rgba(0, 0, 0, 0.4);
+    border-radius: 30px;
+    position: relative;
+    margin-left: 1%;
+}
+
+
+
+.radio-wrapper > label {
+    z-index: 9;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.theme-2 + label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    left: 25px;
+    top: 5px;
+    transition: transform 1s;
+}
+
+.theme-2:checked + label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.theme-1 + label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    left: 8px;
+    top: 5px;
+    text-align: center;
+}
+
+.theme-1:checked + label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.theme-3 + label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    position: absolute;
+    right: 8px;
+    top: 5px;
+    text-align: center;
+}
+
+.theme-3:checked + label {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+
+}
+
+/* MAIN */
+
+#display {
+    border-radius: var(--border-all);
+    display: flex;
+    justify-content: end;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+
+#display > #signal {
+    position: absolute;
+    left: 15px;
+    top: 20px;
+    font-size: 1.5rem;
+}
+
+#result {
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+#calc-keyboard {
+    padding: 1rem;
+    border-radius: var(--border-all);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+}
+
+button {
+    height: 4rem;
+    border-radius: var(--border-all);
+    border: none;
+    cursor: pointer;
+}
+
+.square-btn {
+    width: 24%;
+    height: 4rem;
+}
+
+.del-reset-btn {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.rect-btn {
+    flex-basis: 50%;
+}

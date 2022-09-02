@@ -1,0 +1,81 @@
+:root {
+    --bg-main-verydark: hsl(268, 75%, 9%);
+    --bg-toggle-keypad-screen-grayish: hsl(268, 91%, 12%);
+
+    --key-bg-del-reset: hsl(281, 89%, 26%);
+    --key-shadow-del-reset: hsl(285, 91%, 52%);
+    --key-bg-equal-cyan: hsl(176, 100%, 44%);
+    --key-shadow-equal-cyan: hsl(177, 92%, 70%);
+    --key-bg-square-verydark:  hsl(268, 47%, 21%);
+    --key-shadow-square-darkmagenta: hsl(290, 70%, 36%);
+
+    --hover-key-bg-square-verydark:  hsl(268, 49%, 41%);
+    --hover-key-shadow-del-reset: hsl(285, 55%, 57%);
+    --hover-key-bg-equal-cyan: hsl(176, 100%, 91%);
+
+    --text-yellow: hsl(52, 100%, 62%);
+    --text-verydark: hsl(198, 20%, 13%);
+    --text-white: #FFF;
+}
+
+body {
+    background-color: var(--bg-main-verydark);
+}
+
+header > h1{
+    color: var(--text-yellow);
+}
+
+
+
+.section-theme {
+    color: var(--text-yellow);
+}
+
+.radio-wrapper {
+    background-color: var(--bg-toggle-keypad-screen-grayish);
+}
+
+.theme-2:checked + label, .theme-1:checked + label, .theme-3:checked + label {
+    background: var(--key-bg-equal-cyan);
+}
+
+#display {
+    background-color: var(--bg-toggle-keypad-screen-grayish);
+    color: var(--text-yellow);
+}
+
+
+#calc-keyboard {
+    background-color: var(--bg-toggle-keypad-screen-grayish);
+}
+
+.square-btn {
+    background-color: var(--key-bg-square-verydark);
+    color: var(--text-yellow);
+    box-shadow: 0px -4px inset var(--key-shadow-square-darkmagenta);
+}
+
+.square-btn:hover {
+    background-color: var(--hover-key-bg-square-verydark);
+}
+
+.del-reset-btn {
+    background-color: var(--key-bg-del-reset);
+    color: var(--text-white);
+    box-shadow: 0px -4px inset var(--key-shadow-del-reset);
+}
+
+.del-reset-btn:hover {
+    background-color: var(--hover-key-shadow-del-reset);
+}
+
+.equal-btn {
+    background-color: var(--key-bg-equal-cyan);
+    color: var(--text-verydark);
+    box-shadow: 0px -4px inset var(--key-shadow-equal-cyan);
+}
+
+.equal-btn:hover {
+    background-color: var(--hover-key-bg-equal-cyan);
+}

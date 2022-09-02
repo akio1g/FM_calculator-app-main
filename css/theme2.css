@@ -1,0 +1,78 @@
+:root {
+    --bg-main-lightgray: hsl(0, 0%, 90%);
+    --bg-toggle-keypad-grayish: hsl(0, 5%, 81%);
+    --bg-screen-verylight: hsl(0, 0%, 93%);
+
+    --key-bg-del-reset: hsl(185, 42%, 37%);
+    --key-shadow-del-reset: hsl(185, 58%, 25%);
+    --key-bg-equal-orange: hsl(25, 98%, 40%);
+    --key-shadow-equal-orange: hsl(25, 99%, 27%);
+    --key-bg-square-light: hsl(45, 7%, 89%);
+    --key-shadow-square-light: hsl(35, 11%, 61%);
+
+    --hover-key-bg-square-light: hsl(30, 100%, 100%);
+    --hover-key-bg-del-reset: hsl(185, 44%, 52%);
+    --hover-key-bg-equal-orange: hsl(25, 49%, 53%);
+
+    --text-verydark: hsl(60, 10%, 19%);
+    --text-white: #FFF;
+}
+
+body {
+    background-color: var(--bg-main-lightgray);
+}
+
+header > h1{
+    color: var(--text-verydark);
+}
+
+.section-theme {
+    color: var(--text-verydark);
+}
+
+.radio-wrapper {
+    background-color: var(--bg-toggle-keypad-grayish);
+}
+
+.theme-2:checked + label, .theme-1:checked + label, .theme-3:checked + label {
+    background: var(--key-bg-equal-orange);
+}
+
+#display {
+    background-color: var(--bg-screen-verylight);
+    color: var(--text-verydark);
+}
+
+#calc-keyboard {
+    background-color: var(--bg-toggle-keypad-grayish);
+}
+
+.square-btn {
+    background-color: var(--key-bg-square-light);
+    color: var(--text-verydark);
+    box-shadow: 0px -4px inset var(--key-shadow-square-light);
+}
+
+.square-btn:hover {
+    background-color: var(--hover-key-bg-square-light);
+}
+
+.del-reset-btn {
+    background-color: var(--key-bg-del-reset);
+    color: var(--text-white);
+    box-shadow: 0px -4px inset var(--key-shadow-del-reset);
+}
+
+.del-reset-btn:hover {
+    background-color: var(--hover-key-bg-del-reset);
+}
+
+.equal-btn {
+    background-color: var(--key-bg-equal-orange);
+    color: var(--text-white);
+    box-shadow: 0px -4px inset var(--key-shadow-equal-orange);
+}
+
+.equal-btn:hover {
+    background-color: var(--hover-key-bg-equal-orange);
+}

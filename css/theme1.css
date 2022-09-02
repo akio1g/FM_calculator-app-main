@@ -1,0 +1,78 @@
+:root {
+    --bg-main-verydark: hsl(222, 26%, 31%);
+    --bg-toggle-keypad-verydark: hsl(223, 31%, 20%);
+    --bg-screen-verydark: hsl(224, 36%, 15%);
+
+    --key-bg-del-reset: hsl(225, 21%, 49%);
+    --key-shadow-del-reset: hsl(224, 28%, 35%);
+    --key-bg-equal-red: hsl(6, 63%, 50%);
+    --key-shadow-equal-red: hsl(6, 70%, 34%);
+    --key-bg-square-light: hsl(30, 25%, 89%);   
+    --key-shadow-square-light: hsl(28, 16%, 65%);
+    
+    --hover-key-bg-square-light: hsl(30, 50%, 96%);
+    --hover-key-bg-del-reset: hsl(225, 32%, 64%);
+    --hover-key-bg-equal-red: hsl(6, 55%, 59%);
+
+    --text-verydark: hsl(221, 14%, 31%);
+    --text-white: #FFF;
+}
+
+body {
+    background-color: var(--bg-main-verydark);
+}
+
+header > h1{
+    color: var(--text-white);
+}
+
+.section-theme {
+    color: var(--text-white);
+}
+
+.radio-wrapper {
+    background-color: var(--bg-toggle-keypad-verydark);
+}
+
+.theme-2:checked + label, .theme-1:checked + label, .theme-3:checked + label {
+    background: var(--key-bg-equal-red);
+}
+
+#display {
+    background-color: var(--bg-screen-verydark);
+    color: var(--text-white);
+}
+
+#calc-keyboard {
+    background-color: var(--bg-toggle-keypad-verydark);
+}
+
+.square-btn {
+    background-color: var(--key-bg-square-light);
+    color: var(--text-verydark);
+    box-shadow: 0px -4px inset var(--key-shadow-square-light);
+}
+
+.square-btn:hover {
+    background-color: var(--hover-key-bg-square-light);
+}
+
+.del-reset-btn {
+    background-color: var(--key-bg-del-reset);
+    color: var(--text-white);
+    box-shadow: 0px -4px inset var(--key-shadow-del-reset);
+}
+
+.del-reset-btn:hover {
+    background-color: var(--hover-key-bg-del-reset);
+}
+
+.equal-btn {
+    background-color: var(--key-bg-equal-red);
+    color: var(--text-white);
+    box-shadow: 0px -4px inset var(--key-shadow-equal-red);
+}
+
+.equal-btn:hover {
+    background-color: var(--hover-key-bg-equal-red);
+}
