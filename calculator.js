@@ -1,8 +1,8 @@
-let currentNumber = []; //? string array with all characters
+
+let arrayCurrentNumber = []; //? string array with all characters
 let lastNumber; //? last number before a calculation
 let signalChoosed; //? + || - || x || /
-
-
+let hasDot = false;
 
 /**
  * addNumber -> void
@@ -10,18 +10,61 @@ let signalChoosed; //? + || - || x || /
  * @param value String received from the button click;
  */
 function addNumber(value) {
-    currentNumber.push(value);
+    let screenResult = document.getElementById('result');
+    
+    if(value === '.') {
+        if( !hasDot ) {
+            arrayCurrentNumber.push(value);
+            hasDot = true;
+        }
+    } else {
+        arrayCurrentNumber.push(value);
+    }
+    
+    screenResult.innerText = convertToNumber(arrayCurrentNumber);
 }
 
 /** addSignal -> void
  * * called when a signal button is clicked
- * @param value signal (+ || - || / || *)
+ * @param value signal (+ || - || / || x)
  */
 function addSignal(value) {
+    let screenResult = document.getElementById('result');
     let screenSignal = document.getElementById('signal');
 
+    lastNumber = parseFloat(screenResult.textContent);
+    clearCurrentNumber();
     screenSignal.innerText = value;
-    let signalChoosed = value;
+    signalChoosed = value;
+}
+
+/** calculation
+ * * do the math calculation
+ * @param {Number before signal} x 
+ * @param {Number after signal} y 
+ * @returns the result
+ */
+function calculation(x, y) {
+    let final = 0;
+
+    switch(signalChoosed) {
+        case '+':
+            final = x + y;
+            break;
+        case '-':
+            final = x - y;
+            break;
+        case 'x':
+            final = x * y;
+            break;
+        case '/':
+            final = x / y;
+            break;
+        default:
+            alert('Not recognized signal');
+    }
+
+    return final;
 }
 
 /** reset -> void
@@ -36,7 +79,7 @@ function reset() {
     screenResult.innerText = '0';
     signalChoosed = '';
     lastNumber = 0;
-    currentNumber = [];
+    clearCurrentNumber();
 }
 
 /** onDelete -> void
@@ -45,7 +88,7 @@ function reset() {
 function onDelete() {
     let screenResult = document.getElementById('result');
     screenResult.innerText = '0';
-    currentNumber = [];
+    clearCurrentNumber();
 }
 
 /** 
@@ -55,8 +98,27 @@ function onDelete() {
 */
 function convertToNumber(arr) {
     let x = '';
-    for(let number in arr) {
+    for(let number of arr) {
         x += number;
     }
-    return parseFloat(x);
+    return x;
+}
+
+/** 
+ *  * Show the result on screen
+ */
+function doResult() {
+    let screenResult = document.getElementById('result');
+    const secondValue = parseFloat(screenResult.textContent);
+
+    const finalResult = calculation(lastNumber, secondValue).toFixed(2);
+    screenResult.innerText = `${finalResult}`;
+}
+
+/**
+ * * Clear current number
+ */
+function clearCurrentNumber() {
+    arrayCurrentNumber = [];
+    hasDot = false;
 }

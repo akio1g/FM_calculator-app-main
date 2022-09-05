@@ -60,32 +60,32 @@
 
   <section id="calc-keyboard">
     <div class="row">
-      <button class="square-btn" id="7">7</button>
-      <button class="square-btn" id="8">8</button>
-      <button class="square-btn" id="9">9</button>
+      <button class="square-btn" id="7" onclick="addNumber(7)">7</button>
+      <button class="square-btn" id="8" onclick="addNumber(8)">8</button>
+      <button class="square-btn" id="9" onclick="addNumber(9)">9</button>
       <button class="square-btn del-reset-btn" id="del" onclick="onDelete()">del</button>
     </div>
     <div class="row">
-      <button class="square-btn" id="4">4</button>
-      <button class="square-btn" id="5">5</button>
-      <button class="square-btn" id="6">6</button>
+      <button class="square-btn" id="4" onclick="addNumber(4)">4</button>
+      <button class="square-btn" id="5" onclick="addNumber(5)">5</button>
+      <button class="square-btn" id="6" onclick="addNumber(6)">6</button>
       <button class="square-btn" id="plus" onclick="addSignal('+')">+</button>
     </div>
     <div class="row">
-      <button class="square-btn" id="1">1</button>
-      <button class="square-btn" id="2">2</button>
-      <button class="square-btn" id="3">3</button>
+      <button class="square-btn" id="1" onclick="addNumber(1)">1</button>
+      <button class="square-btn" id="2" onclick="addNumber(2)">2</button>
+      <button class="square-btn" id="3" onclick="addNumber(3)">3</button>
       <button class="square-btn" id="minus" onclick="addSignal('-')">-</button>
     </div>
     <div class="row">
-      <button class="square-btn" id="dot">.</button>
-      <button class="square-btn" id="0">0</button>
+      <button class="square-btn" id="dot" onclick="addNumber('.')">.</button>
+      <button class="square-btn" id="0" onclick="addNumber(0)">0</button>
       <button class="square-btn" id="slash" onclick="addSignal('/')">/</button>
       <button class="square-btn" id="x" onclick="addSignal('x')">x</button>
     </div>
     <div class="row">
       <button class="rect-btn del-reset-btn" onclick="reset()">reset</button>
-      <button class="rect-btn equal-btn">=</button>
+      <button class="rect-btn equal-btn" onclick="doResult()">=</button>
     </div>
   </section>
 </main>
